@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { fetchCompanies, submitMeetingRequest } from "./services/api";
+import logoTransfergest from "./images/logo-transfergestV.png";
 
 function formatCompanyOption(company) {
   return String(company.denominacao || "").trim();
@@ -97,7 +98,7 @@ export default function App() {
     <main className="tg-page">
       <section className="tg-shell">
         <header className="tg-brand">
-          <img src="src/images/logo-transfergestV.png" alt="TransferGest" className="tg-logo" />
+          <img src={logoTransfergest} alt="TransferGest" className="tg-logo" />
           <h1>Vamos marcar a sua reunião</h1>
           <p>Selecione a empresa e diga-nos o melhor horário para ligarmos.</p>
         </header>
