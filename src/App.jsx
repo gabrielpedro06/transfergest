@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { fetchCompanies, submitMeetingRequest } from "./services/api";
-import logoTransfergest from "./images/logo-transfergestV.png";
+import logoTransfergest from "./images/logo-TransfergestV.png";
 
 function formatCompanyOption(company) {
   return String(company.denominacao || "").trim();
@@ -28,7 +28,7 @@ export default function App() {
           if (!search.trim() && data.length === 0) {
             setFeedback({
               type: "error",
-              text: "Nao ha empresas visiveis com estas credenciais. Configure SUPABASE_SERVICE_ROLE_KEY ou uma policy SELECT para transfergest_registos.",
+              text: "Nao ha empresas visiveis com estas credenciais. Configure SUPABASE_SERVICE_ROLE_KEY ou uma policy SELECT para Transfergest_registos.",
             });
           } else if (data.length > 0) {
             setFeedback(null);
@@ -84,7 +84,7 @@ export default function App() {
         horarioContacto: contactWindow.trim(),
       });
 
-      setFeedback({ type: "success", text: "Pedido enviado com sucesso. A equipa TransferGest vai contactar brevemente." });
+      setFeedback({ type: "success", text: "Pedido enviado com sucesso. A equipa Transfergest vai contactar brevemente." });
       setPhone("");
       setContactWindow("");
     } catch (error) {
@@ -98,7 +98,7 @@ export default function App() {
     <main className="tg-page">
       <section className="tg-shell">
         <header className="tg-brand">
-          <img src={logoTransfergest} alt="TransferGest" className="tg-logo" />
+          <img src={logoTransfergest} alt="Transfergest" className="tg-logo" />
           <h1>Vamos marcar a sua reunião</h1>
           <p>Selecione a empresa e diga-nos o melhor horário para ligarmos.</p>
         </header>
