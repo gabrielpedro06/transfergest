@@ -1,0 +1,124 @@
+:root {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  color: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url("./images/bg.jpg") center / cover no-repeat fixed;
+}
+
+.tg-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 14px;
+}
+
+.tg-shell {
+  width: min(720px, 100%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  padding: 28px;
+  color: #000000;
+  box-shadow: 0 24px 40px rgba(15, 23, 42, 0.3);
+}
+
+.tg-brand {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.tg-logo {
+  width: 180px;
+  max-width: 72%;
+  margin-bottom: 14px;
+}
+
+.tg-brand h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.tg-brand p {
+  margin: 8px 0 0;
+  color: #000000;
+}
+
+.tg-form {
+  display: grid;
+  gap: 10px;
+}
+
+.tg-form label {
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.tg-form input,
+.tg-form select {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #000000;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.tg-form button {
+  margin-top: 6px;
+  border: none;
+  border-radius: 10px;
+  background: #f59e0b;
+  color: white;
+  padding: 13px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.tg-form button:hover:enabled {
+  transform: translateY(-1px);
+  filter: brightness(0.95);
+}
+
+.tg-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tg-feedback {
+  margin: 4px 0 0;
+  font-size: 0.94rem;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.tg-feedback.success {
+  background: #166534;
+  color: #dcfce7;
+}
+
+.tg-feedback.error {
+  background: #991b1b;
+  color: #fee2e2;
+}
+
+@media (max-width: 640px) {
+  .tg-shell {
+    padding: 20px;
+  }
+
+  .tg-brand h1 {
+    font-size: 1.35rem;
+  }
+}
